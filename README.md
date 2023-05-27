@@ -5,7 +5,7 @@ To intercept traffic from your Flutter-based Android APK using Burp Suite, you c
   2. Locate the method getHttpClient() or any other method responsible for creating the HTTP client object. It may be named getHttpClient(), createHttpClient(), or similar.
   3. Replace the existing code with the following code snippet:
   
-  ``
+  ```
   import 'dart:io';
 
   static HttpClient getHttpClient() {
@@ -17,7 +17,9 @@ To intercept traffic from your Flutter-based Android APK using Burp Suite, you c
 
   return client;
   }
-``
+  
+```
+
   4. In the return "PROXY 127.0.0.1:8080;" line, replace 127.0.0.1 with the IP address of your Burp Suite proxy and 8080 with the corresponding port number.
   5. Save the file.
   
