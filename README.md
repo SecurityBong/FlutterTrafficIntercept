@@ -27,4 +27,5 @@ To intercept traffic from your Flutter-based Android APK using Burp Suite, you c
   The badCertificateCallback is set to allow connections to hosts with self-signed certificates, which is often the case during testing and debugging.
   Make sure you have Burp Suite running and the proxy listener configured to listen on the specified IP address and port. 
   With these changes, your Flutter application should send its network traffic through the Burp Suite proxy, allowing you to intercept and analyze the requests   and     responses.
+  
   Please note that hard coding the proxy configuration in your app is generally not recommended for production purposes. It is primarily useful for testing, debugging, and development scenarios.
