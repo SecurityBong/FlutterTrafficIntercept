@@ -1,7 +1,5 @@
 # FlutterTrafficIntercept
 
-Certainly! Here's a step-by-step guide on how to achieve intercepting traffic from your Flutter app to Burp Suite with the necessary code modifications:
-
 Step 1: Obtain Burp Suite and Flutter Development Environment
 - Download and install Burp Suite from the PortSwigger website.
 - Set up the Flutter development environment on your machine by following the official Flutter documentation.
