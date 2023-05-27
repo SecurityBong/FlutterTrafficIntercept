@@ -1,7 +1,7 @@
 # FlutterTrafficManualIntercept
 We generally use the reFlutter framework on the apk or on IPA to intercept the traffic in our proxy application. Some times we cant use the reFlutter framework as it throws error saying this engine is currently not supported.
 Then devs need to manually add the burp certificate and include proxy configuration manually in the flutter app code.
-I have created a step by step guide on a basic level on how to achieve this on how to add proxy manually in flutter
+I have created a step by step guide on a basic level on how to add proxy manually in flutter
 
 
 Step 1: Obtain Burp Suite and Flutter Development Environment
