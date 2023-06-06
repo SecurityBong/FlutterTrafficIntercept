@@ -89,6 +89,7 @@ Please note that these modifications should be used for development and testing 
 **Note**:
 Sometime above will not work. For that we need to use this below:
 
+We need to use both HttpClient _client, IOClient _ioClient. Also we need to make API call to _ioClient
 ```
 Future<SecurityContext> get globalContext async {
     final sslCert1 = await
@@ -109,5 +110,3 @@ Future<SecurityContext> get globalContext async {
         _ioClient = new IOClient(_client);
     }
 ```
-We need to use both HttpClient _client, IOClient _ioClient
-Also we need to make API call to _ioClient
