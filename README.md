@@ -85,3 +85,29 @@ Step 7: Run the Flutter App
 With these modifications, your Flutter app should route its network traffic through Burp Suite, allowing you to intercept and analyze the requests and responses in Burp Suite while using the app.
 
 Please note that these modifications should be used for development and testing purposes only and should not be deployed in a production environment.
+
+Note:
+Sometime it will not. For that we need to use this:
+
+```
+Future<SecurityContext> get globalContext async {
+    final sslCert1 = await
+    rootBundle.load('resources/certificates/vapt.pem');
+    SecurityContext sc = new SecurityContext(withTrustedRoots: true);
+    sc.setTrustedCertificatesBytes(sslCert1.buffer.asInt8List());
+    return sc;
+  }
+  Future<void> setSSLPinning(String uri) async {
+           _client = HttpClient(context: await globalContext);
+            this.proxy = await _secureStorage.getLocalIp();
+       
+
+
+            _client.findProxy = (uri) => "PROXY $proxy;";
+
+          _client.badCertificateCallback = (X509Certificate cert, String host, int port) => true;
+        _ioClient = new IOClient(_client);
+    }
+```
+We need to use both HttpClient _client, IOClient _ioClient
+Also we need to make API call to _ioClient
