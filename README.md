@@ -86,8 +86,8 @@ With these modifications, your Flutter app should route its network traffic thro
 
 Please note that these modifications should be used for development and testing purposes only and should not be deployed in a production environment.
 
-Note:
-Sometime it will not. For that we need to use this:
+**Note**:
+Sometime above will not work. For that we need to use this below:
 
 ```
 Future<SecurityContext> get globalContext async {
