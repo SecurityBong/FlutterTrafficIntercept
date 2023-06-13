@@ -110,3 +110,6 @@ Future<SecurityContext> get globalContext async {
         _ioClient = new IOClient(_client);
     }
 ```
+If you are using DIO then you can also use this:
+![WhatsApp Image 2023-06-07 at 3 44 37 PM](https://github.com/SecurityBong/FlutterTrafficManualIntercept/assets/52169190/8fc81ea9-7a3e-4f06-85c3-66f5a5b49a4e)
+
